@@ -1,7 +1,7 @@
 # Netlify Configuration for Fabio Biancardi Site
 
 [build]
-  command = "pnpm build"
+  command = "pnpm install && pnpm build"
   publish = "dist"
 
 # Redirect all requests to index.html for client-side routing
