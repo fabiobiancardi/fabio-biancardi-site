@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabio Biancardi - Especialista em Cybersecurity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1a1a1a;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #00d4ff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00d4ff;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #b0b0b0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #00d4ff;
+            color: #0f3460;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #00b8d4;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 20px;
+        }
+
+        section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #0f3460;
+            text-align: center;
+        }
+
+        .about-content {
+            background: #f5f5f5;
+            padding: 40px;
+            border-radius: 10px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .skill-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            padding: 30px;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .skill-card:hover {
+            border-color: #00d4ff;
+            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #0f3460;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .skill-card ul {
+            list-style: none;
+            color: #666;
+        }
+
+        .skill-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .skill-card li:last-child {
+            border-bottom: none;
+        }
+
+        footer {
+            background: #0f3460;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+
+            section h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">FB</div>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Fabio Biancardi</h1>
+            <p>Especialista em Cybersecurity e Infraestrutura de TI</p>
+            <a href="#sobre" class="cta-button">Saiba Mais</a>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <div class="about-content">
+                <p><strong>Analista de Infraestrutura</strong> com MBA em CyberSecurity e Cyber Crimes, Pós-graduado em LGPD Lei Geral de Proteção de Dados e Graduado em Redes de Computadores.</p>
+                
+                <p style="margin-top: 20px;">Experiência de mais de quinze anos em T.I atuando na área de Infraestrutura. Participei de seis projetos desde o cabeamento estruturado até Switches, instalações de Servidores Windows, Linux e estações de trabalho.</p>
+                
+                <p style="margin-top: 20px;"><strong>Habilidades principais:</strong> Análise de sistema, reavaliação de rotinas e métodos de trabalho, elaboração de manuais, treinamento e acompanhamento na utilização do sistema visando assegurar o correto funcionamento.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="habilidades" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2>Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Virtualização</h3>
+                    <ul>
+                        <li>VMware</li>
+                        <li>Xenserver</li>
+                        <li>Virtual Box</li>
+                        <li>Hyper-V</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Windows Server</h3>
+                    <ul>
+                        <li>Active Directory</li>
+                        <li>DNS</li>
+                        <li>DHCP</li>
+                        <li>Terminal Server</li>
+                        <li>Office 365</li>
+                        <li>MS Project</li>
+                        <li>MS Visio</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Segurança</h3>
+                    <ul>
+                        <li>Symantec Antivirus</li>
+                        <li>McAfee</li>
+                        <li>Trendmicro</li>
+                        <li>Kaspersky</li>
+                        <li>BitDefender</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Linux</h3>
+                    <ul>
+                        <li>CentOS</li>
+                        <li>Red Hat</li>
+                        <li>Debian</li>
+                        <li>Ubuntu</li>
+                        <li>Fedora</li>
+                        <li>SUSE</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Backup</h3>
+                    <ul>
+                        <li>Backup Exec</li>
+                        <li>Disaster Recovery</li>
+                        <li>Business Continuity</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Certificações</h3>
+                    <ul>
+                        <li>MBA em CyberSecurity</li>
+                        <li>Pós-graduação em LGPD</li>
+                        <li>Graduação em Redes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p style="text-align: center; font-size: 18px; color: #666;">
+                Interessado em trabalhar juntos? Entre em contato através dos canais abaixo.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Fabio Biancardi. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
