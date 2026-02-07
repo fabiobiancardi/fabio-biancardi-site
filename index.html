@@ -440,6 +440,163 @@
         margin-top: 0;
       }
     }
+	
+	
+	
+<!-- ============================================ -->
+<!-- SEÇÃO STACK TECNOLÓGICO -->
+<!-- ============================================ -->
+
+<!-- CSS (adicione no <style> do seu HTML) -->
+<style>
+  /* STACK TECNOLÓGICO */
+  .tech-stack-section {
+    padding: 90px 20px;
+  }
+
+  .tech-stack-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    margin-top: 40px;
+  }
+
+  .tech-category {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .tech-category-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0f3460;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #0d6efd;
+  }
+
+  .tech-category-title::before {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 24px;
+    background: #0d6efd;
+    border-radius: 2px;
+  }
+
+  .tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tech-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border: 2px solid #0d6efd;
+    border-radius: 20px;
+    background: #fff;
+    color: #0d6efd;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+
+  .tech-badge:hover {
+    background: #0d6efd;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+  }
+
+  /* Variações de cores por categoria */
+  .tech-badge.virtualization {
+    border-color: #3b82f6;
+    color: #3b82f6;
+  }
+
+  .tech-badge.virtualization:hover {
+    background: #3b82f6;
+    color: #fff;
+  }
+
+  .tech-badge.backup {
+    border-color: #10b981;
+    color: #10b981;
+  }
+
+  .tech-badge.backup:hover {
+    background: #10b981;
+    color: #fff;
+  }
+
+  .tech-badge.windows {
+    border-color: #059669;
+    color: #059669;
+  }
+
+  .tech-badge.windows:hover {
+    background: #059669;
+    color: #fff;
+  }
+
+  .tech-badge.antivirus {
+    border-color: #06b6d4;
+    color: #06b6d4;
+  }
+
+  .tech-badge.antivirus:hover {
+    background: #06b6d4;
+    color: #fff;
+  }
+
+  .tech-badge.linux {
+    border-color: #8b5cf6;
+    color: #8b5cf6;
+  }
+
+  .tech-badge.linux:hover {
+    background: #8b5cf6;
+    color: #fff;
+  }
+
+  .tech-badge.education {
+    border-color: #ec4899;
+    color: #ec4899;
+  }
+
+  .tech-badge.education:hover {
+    background: #ec4899;
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .tech-stack-container {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .tech-category-title {
+      font-size: 1.1rem;
+    }
+
+    .tech-badge {
+      padding: 6px 12px;
+      font-size: 0.85rem;
+    }
+  }
+	
+<!-- ============================================ -->
+<!-- SEÇÃO STACK TECNOLÓGICO -->
+<!-- ============================================ -->	
+	
   </style>
 </head>
 
@@ -529,13 +686,7 @@
       elaboração de manuais técnicos, treinamentos e acompanhamento de usuários.
     </p>
 
-    <h5 class="mt-4">Principais conhecimentos técnicos</h5>
-    <ul>
-      <li><strong>Virtualização:</strong> VMware, XenServer, VirtualBox, Hyper-V</li>
-      <li><strong>Backup:</strong> Veritas Backup Exec</li>
-      <li><strong>Windows Server:</strong> AD, DNS, DHCP, Terminal Server, Office 365</li>
-      <li><strong>Antivírus:</strong> Symantec, McAfee, Trend Micro, Kaspersky, Bitdefender</li>
-      <li><strong>Linux:</strong> CentOS, Red Hat, Debian, Ubuntu, Fedora, SUSE</li>
+    
     </ul>
   </div>
 </section>
@@ -600,7 +751,7 @@
       <div class="certification-card">
         <img src="https://thumbs2.imgbox.com/49/66/PV8fz4ZI_t.png" alt="Fortinet NSE3" style="width: 100px; height: 100px;">
         <h5>Getting Started in Cybersecurity</h5>
-        <p>Network Security Associate</p>
+        <p>Cybersecurity</p>
       </div>	
 	
 	
@@ -632,12 +783,123 @@
     <span class="badge bg-primary badge-skill">Infraestrutura de TI</span>
     <span class="badge bg-primary badge-skill">Cybersegurança</span>
     <span class="badge bg-primary badge-skill">Redes Corporativas</span>
-    <span class="badge bg-primary badge-skill">Windows Server</span>
-    <span class="badge bg-primary badge-skill">Linux</span>
-    <span class="badge bg-primary badge-skill">Virtualização</span>
     <span class="badge bg-primary badge-skill">LGPD</span>
   </div>
 </section>
+
+
+
+
+<!-- HTML (adicione no <body> do seu HTML, após a seção "Sobre") -->
+<!-- STACK TECNOLÓGICO -->
+<section id="stack" class="tech-stack-section">
+  <div class="container">
+    <h2>Stack Tecnológico</h2>
+
+    <div class="tech-stack-container">
+      <!-- VIRTUALIZAÇÃO -->
+      <div class="tech-category">
+        <div class="tech-category-title">Virtualização</div>
+        <div class="tech-badges">
+          <span class="tech-badge virtualization">VMware</span>
+          <span class="tech-badge virtualization">Xensever</span>
+          <span class="tech-badge virtualization">Hyper-V</span>
+        </div>
+      </div>
+
+      <!-- BACKUP & ARMAZENAMENTO -->
+      <div class="tech-category">
+        <div class="tech-category-title">Backup & Armazenamento</div>
+        <div class="tech-badges">
+          <span class="tech-badge backup">Backup Exec</span>
+          <span class="tech-badge backup">Storage</span>
+        </div>
+      </div>
+
+      <!-- WINDOWS SERVER -->
+      <div class="tech-category">
+        <div class="tech-category-title">Windows Server</div>
+        <div class="tech-badges">
+          <span class="tech-badge windows">Windows Server</span>
+          <span class="tech-badge windows">Active Directory</span>
+          <span class="tech-badge windows">DNS</span>
+          <span class="tech-badge windows">DHCP</span>
+          <span class="tech-badge windows">Terminal Server</span>
+          <span class="tech-badge windows">Office 365</span>
+          <span class="tech-badge windows">MS Project</span>
+          <span class="tech-badge windows">MS Visio</span>
+        </div>
+      </div>
+
+      <!-- ANTIVÍRUS & SEGURANÇA -->
+      <div class="tech-category">
+        <div class="tech-category-title">Antivírus & Segurança</div>
+        <div class="tech-badges">
+          <span class="tech-badge antivirus">Trend Micro Vision One</span>
+          <span class="tech-badge antivirus">SentinelOne</span>
+          <span class="tech-badge antivirus">Crowdstrike</span>
+          <span class="tech-badge antivirus">Kaspersky</span>
+          <span class="tech-badge antivirus">Bitdefender</span>
+          <span class="tech-badge antivirus">Firewall Fortigate</span>
+		</div>
+      </div>
+
+      <!-- LINUX -->
+      <div class="tech-category">
+        <div class="tech-category-title">Linux</div>
+        <div class="tech-badges">
+          <span class="tech-badge linux">Debian</span>
+          <span class="tech-badge linux">Ubuntu</span>
+		  <span class="tech-badge linux">Oracle Linux</span>
+		  <span class="tech-badge linux">Red Hat</span>
+          <span class="tech-badge linux">CentOS</span>
+		  <span class="tech-badge linux">Fedora</span>
+          <span class="tech-badge linux">SUSE</span>
+        </div>
+      </div>
+
+      <!-- FORMAÇÃO ACADÊMICA -->
+      <div class="tech-category">
+        <div class="tech-category-title">Formação Acadêmica</div>
+        <div class="tech-badges">
+          <span class="tech-badge education">MBA Cybersecurity</span>
+          <span class="tech-badge education">Pós-grad. LGPD</span>
+          <span class="tech-badge education">Redes Computadores</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- ARTIGOS -->
 <section id="artigos" class="section">
