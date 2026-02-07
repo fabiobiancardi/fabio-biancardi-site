@@ -166,6 +166,73 @@
       border-radius: 20px;
     }
 
+    /* CERTIFICAÇÕES */
+    .certifications-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-top: 30px;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .certification-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      flex: 0 1 auto;
+      min-width: 160px;
+      max-width: 200px;
+    }
+
+    .certification-card:hover {
+      box-shadow: 0 8px 20px rgba(13, 110, 253, 0.2);
+      border-color: #0d6efd;
+      transform: translateY(-5px);
+    }
+
+    .certification-card img {
+      max-width: 100%;
+      height: auto;
+      max-height: 150px;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .certification-card h5 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #0f3460;
+      margin-bottom: 8px;
+    }
+
+    .certification-card p {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .certifications-container {
+        gap: 15px;
+        justify-content: center;
+      }
+
+      .certification-card {
+        padding: 15px;
+        min-width: 140px;
+        max-width: 170px;
+      }
+
+      .certification-card img {
+        max-height: 120px;
+      }
+    }
+
     /* ARTIGOS */
     article {
       padding: 20px;
@@ -389,6 +456,7 @@
     <div id="menu" class="collapse navbar-collapse">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certificacoes">Certificações</a></li>
         <li class="nav-item"><a class="nav-link" href="#especialidades">Especialidades</a></li>
         
         <!-- DROPDOWN ARTIGOS -->
@@ -400,6 +468,22 @@
             <a class="article-trigger" onclick="openArticle('lgpd-compliance')">LGPD: Compliance e Boas Práticas</a>
             <a class="article-trigger" onclick="openArticle('backup-disaster-recovery')">Backup e Disaster Recovery</a>
             <a class="article-trigger" onclick="openArticle('seguranca-redes')">Segurança em Redes Corporativas</a>
+          </div>
+        </li>
+
+        <!-- DROPDOWN PUBLICAÇÕES -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#publicacoes">Publicações</a>
+          <div class="dropdown-menu">
+            <a class="article-trigger" onclick="openArticle('wsus')">Implantação WSUS</a>
+          </div>
+        </li>
+
+        <!-- DROPDOWN GALERIA -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#galeria">Galeria</a>
+          <div class="dropdown-menu">
+            <a class="article-trigger" onclick="openArticle('galeria')">Galeria de Imagens</a>
           </div>
         </li>
 
@@ -439,7 +523,7 @@
     </p>
 
     <p>
-      Experiência em projetos de infraestrutura, desde cabeamento estruturado
+      Experiência sólida em projetos de infraestrutura, desde cabeamento estruturado
       até a implantação e administração de switches, servidores Windows e Linux,
       além de estações de trabalho. Atuação em análise de sistemas, reavaliação de rotinas,
       elaboração de manuais técnicos, treinamentos e acompanhamento de usuários.
@@ -447,12 +531,97 @@
 
     <h5 class="mt-4">Principais conhecimentos técnicos</h5>
     <ul>
-      <li><strong>Virtualização:</strong> VMware, XenServer, Hyper-V</li>
+      <li><strong>Virtualização:</strong> VMware, XenServer, VirtualBox, Hyper-V</li>
       <li><strong>Backup:</strong> Veritas Backup Exec</li>
       <li><strong>Windows Server:</strong> AD, DNS, DHCP, Terminal Server, Office 365</li>
-      <li><strong>Antivírus:</strong> Trend Micro, SentinelOne, Crowdstrike, Kaspersky, Bitdefender</li>
-      <li><strong>Linux:</strong> CentOS, Red Hat, Debian, Ubuntu, Fedora, SUSE, Oracle Linux</li>
+      <li><strong>Antivírus:</strong> Symantec, McAfee, Trend Micro, Kaspersky, Bitdefender</li>
+      <li><strong>Linux:</strong> CentOS, Red Hat, Debian, Ubuntu, Fedora, SUSE</li>
     </ul>
+  </div>
+</section>
+
+<!-- CERTIFICAÇÕES -->
+<section id="certificacoes" class="section">
+  <div class="container">
+    <h2>Certificações</h2>
+
+    <div class="certifications-container">
+      <!-- Microsoft -->
+      <div class="certification-card">
+        <img src="https://thumbs2.imgbox.com/49/e6/S3nZLmBf_t.png" alt="Microsoft Certified" style="width: 100px; height: 100px;">
+        <h5>Microsoft Certified</h5>
+        <p>Technology Specialist</p>
+      </div>
+
+      <!-- Fortinet Certified Associate in Cybersecurity -->
+      <div class="certification-card">
+        <img src="https://thumbs2.imgbox.com/4b/70/Wnpqdd0i_t.png" alt="Fortinet Certified Associate" style="width: 100px; height: 100px;">
+        <h5>Fortinet Certified Associate</h5>
+        <p>Cybersecurity</p>
+      </div>
+
+      <!-- Fortinet Certified Fundamentals -->
+      <div class="certification-card">
+        <img src="https://thumbs2.imgbox.com/48/5c/I2XMnFqA_t.png" alt="Fortinet Certified Fundamentals" style="width: 100px; height: 100px;">
+        <h5>Fortinet Certified Fundamentals</h5>
+        <p>Cybersecurity</p>
+      </div>
+
+
+      <!-- Fortinet NSE1 -->
+      <div class="certification-card">
+        <img src="https://thumbs2.imgbox.com/77/94/xlYaWoAB_t.jpg" alt="Fortinet NSE1" style="width: 100px; height: 100px;">
+        <h5>Fortinet NSE 1</h5>
+        <p>Network Security Associate</p>
+      </div>
+
+      <!-- Fortinet NSE2 -->
+      <div class="certification-card">
+        <img src="https://thumbs2.imgbox.com/1f/12/6hq0hDhG_t.jpg" alt="Fortinet NSE2" style="width: 100px; height: 100px;">
+        <h5>Fortinet NSE 2</h5>
+        <p>Network Security Associate</p>
+      </div>
+
+      <!-- Fortinet NSE3 -->
+      <div class="certification-card">
+        <img src="https://thumbs2.imgbox.com/23/d3/Ohlz7sla_t.jpg" alt="Fortinet NSE3" style="width: 100px; height: 100px;">
+        <h5>Fortinet NSE 3</h5>
+        <p>Network Security Associate</p>
+      </div>
+    
+	      <!-- Fortigate Operator -->
+      <div class="certification-card">
+        <img src="https://thumbs2.imgbox.com/c6/5e/TGnHPb5A_t.png" alt="Fortinet NSE3" style="width: 100px; height: 100px;">
+        <h5>Fortigate Operator</h5>
+        <p>Network Security Associate</p>
+      </div>
+	
+	      <!-- Fortigate Getting Started in Cybersecurity -->
+      <div class="certification-card">
+        <img src="https://thumbs2.imgbox.com/49/66/PV8fz4ZI_t.png" alt="Fortinet NSE3" style="width: 100px; height: 100px;">
+        <h5>Getting Started in Cybersecurity</h5>
+        <p>Network Security Associate</p>
+      </div>	
+	
+	
+	      <!-- Fortigate Threat Landcaspe -->
+      <div class="certification-card">
+        <img src="https://thumbs2.imgbox.com/4f/15/5odWtUuh_t.png" alt="Fortinet NSE3" style="width: 100px; height: 100px;">
+        <h5>Threat Landscape</h5>
+        <p>Network Security Associate</p>
+      </div>		
+	
+	
+	<!-- Proofpoint Certified Ransomware Specialist -->
+      <div class="certification-card">
+        <img src="https://thumbs2.imgbox.com/c1/96/VcGZ2K3Q_t.png" alt="Fortinet NSE3" style="width: 100px; height: 100px;">
+        <h5>Proofpoint Certified</h5>
+        <p>Ransomware Specialist</p>
+      </div>
+	
+	
+	
+    </div>
   </div>
 </section>
 
@@ -473,7 +642,7 @@
 <!-- ARTIGOS -->
 <section id="artigos" class="section">
   <div class="container">
-    <h2>Artigos</h2>
+    <h2>Artigos e Insights</h2>
 
     <article onclick="openArticle('seguranca-infraestrutura')">
       <h5>Boas Práticas de Segurança em Infraestrutura</h5>
@@ -503,6 +672,32 @@
       <h5>Segurança em Redes Corporativas</h5>
       <p>Proteção de redes contra ameaças e implementação de arquiteturas seguras.</p>
       <span class="article-trigger">Leia o artigo completo →</span>
+    </article>
+  </div>
+</section>
+
+<!-- PUBLICAÇÕES -->
+<section id="publicacoes" class="section bg-light">
+  <div class="container">
+    <h2>Publicações</h2>
+
+    <article onclick="openArticle('wsus')">
+      <h5>Implantação WSUS</h5>
+      <p>Guia completo para implantação e configuração de servidor WSUS.</p>
+      <span class="article-trigger">Leia a publicação completa →</span>
+    </article>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria" class="section">
+  <div class="container">
+    <h2>Galeria</h2>
+
+    <article onclick="openArticle('galeria')">
+      <h5>Galeria de Imagens</h5>
+      <p>Confira a galeria de imagens e projetos.</p>
+      <span class="article-trigger">Ver galeria completa →</span>
     </article>
   </div>
 </section>
@@ -910,6 +1105,103 @@
         <p>Segurança de rede corporativa requer uma abordagem em camadas com múltiplas tecnologias e processos. Implemente as práticas recomendadas e mantenha vigilância constante.</p>
         <p>Lembre-se: a segurança é um processo contínuo, não um projeto único.</p>
       `
+    },
+    'wsus': {
+      title: 'Implantação WSUS',
+      content: `
+        <h3>O Que é WSUS?</h3>
+        <p>WSUS (Windows Server Update Services) é um serviço da Microsoft que permite gerenciar e distribuir atualizações de segurança para computadores em uma rede corporativa.</p>
+        
+        <div class="highlight-box"><strong>Nota:</strong> Este conteúdo será elaborado em breve. Você pode adicionar informações sobre instalação, configuração e melhores práticas de WSUS aqui.</div>
+        
+        <h3>Benefícios do WSUS</h3>
+        <ul>
+          <li>Controle centralizado de atualizações</li>
+          <li>Redução de banda de internet</li>
+          <li>Testes antes de distribuição</li>
+          <li>Relatórios de conformidade</li>
+        </ul>
+        
+        <h3>Próximas Seções</h3>
+        <p>Conteúdo a ser adicionado:</p>
+        <div class="checklist">
+          <ul>
+            <li>Requisitos de sistema</li>
+            <li>Instalação e configuração</li>
+            <li>Gerenciamento de grupos de computadores</li>
+            <li>Aprovação de atualizações</li>
+            <li>Monitoramento e relatórios</li>
+            <li>Troubleshooting comum</li>
+          <div class="highlight-box"><strong>Nota:</strong> Este conteúdo encontra-se em elaboração e será disponibilizado em breve.</div>
+		  
+		  </ul>
+        </div>
+      `
+    },
+    'galeria': {
+      title: 'Galeria de Imagens',
+      content: `
+     
+    
+	<div class="highlight-box"><strong>Evento:</strong>Cybersegurança Linx 2025</div>
+        <p> <img src="https://thumbs2.imgbox.com/e1/e8/ZcEXFLjd_t.png" alt="image host"/></a> </p>
+        <p> <img src="https://thumbs2.imgbox.com/41/33/A40k0xLT_t.jpg" alt="image host"/></a> </p>
+  
+    <div class="highlight-box"><strong>Evento:</strong>IA Dell 2025</div>
+   		<p> <img src="https://thumbs2.imgbox.com/76/53/al14UvzX_t.jpg" alt="image host"/></a> </p>
+  
+    <div class="highlight-box"><strong>Desenvolvimento Profissional:</strong>Fortinet 2025</div>
+           <p> <img src="https://thumbs2.imgbox.com/eb/f6/8YJCxA8f_t.jpg" alt="image host"/></a> </p>
+
+    <div class="highlight-box"><strong>Evento:</strong>Fortinet Cybersecurity Summit 2025</div>
+  		<p> <img src="https://thumbs2.imgbox.com/dd/13/eEDt01R3_t.jpg" alt="image host"/></a> </p>
+        <p> <img src="https://thumbs2.imgbox.com/40/d2/Q4MIpett_t.jpg" alt="image host"/></a> </p>
+		<p> <img src="https://thumbs2.imgbox.com/c9/57/lSOAZ4JU_t.jpg" alt="image host"/></a> </p>
+		<p> <img src="https://thumbs2.imgbox.com/e0/b7/RJx6Dw9R_t.jpg" alt="image host"/></a> </p>
+        <p> <img src="https://thumbs2.imgbox.com/6f/27/RGCm2rJt_t.jpg" alt="image host"/></a> </p>
+        <p> <img src="https://thumbs2.imgbox.com/74/77/R6sPw793_t.jpg" alt="image host"/></a> </p> 
+
+    <div class="highlight-box"><strong>Evento:</strong>Fortinet Cybersecurity Summit 2023</div>
+    	<p> <img src="https://thumbs2.imgbox.com/c3/a6/uVzuGJEs_t.jpg" alt="image host"/></a> </p>
+		<p> <img src="https://thumbs2.imgbox.com/d1/48/g4Jfvpvy_t.jpg" alt="image host"/></a> </p>
+
+    <div class="highlight-box"><strong>Evento:</strong>Proofpoint Cybersecurity 2025</div>
+    	<p> <img src="https://thumbs2.imgbox.com/f0/f6/Gt4SRG42_t.jpg" alt="image host"/></a> </p>
+		<p> <img src="https://thumbs2.imgbox.com/a4/8d/w4T5LfjT_t.jpg" alt="image host"/></a> </p>
+		<p> <img src="https://thumbs2.imgbox.com/f6/45/xHmKCqsO_t.jpg" alt="image host"/></a> </p>
+    	<p> <img src="https://thumbs2.imgbox.com/f7/83/GFFNnZNI_t.jpg" alt="image host"/></a> </p>
+		<p> <img src="https://thumbs2.imgbox.com/c8/6a/EuM6rZoi_t.jpg" alt="image host"/></a> </p>
+		<p> <img src="https://thumbs2.imgbox.com/26/30/tCCoXNjL_t.jpg" alt="image host"/></a> </p>
+		<p> <img src="https://thumbs2.imgbox.com/e1/84/SouPJQUm_t.jpg" alt="image host"/></a> </p>
+        <p> <img src="https://thumbs2.imgbox.com/c6/49/Uf6dND1Z_t.jpg" alt="image host"/></a> </p>
+
+    <div class="highlight-box"><strong>Evento:</strong>AMD / HP 2024</div>
+   		<p> <img src="https://thumbs2.imgbox.com/f7/62/9T5ebpwP_t.jpg" alt="image host"/></a> </p>
+
+    <div class="highlight-box"><strong>Desenvolvimento Profissional:</strong>Trend Micro 2025</div>
+    	<p> <img src="https://thumbs2.imgbox.com/61/88/Wq1HHEUI_t.jpg" alt="image host"/></a> </p> 
+		<p> <img src="https://thumbs2.imgbox.com/75/4a/OpiSyFGG_t.jpg" alt="image host"/></a> </p>
+		<p> <img src="https://thumbs2.imgbox.com/80/e8/Jzm2UXjx_t.jpg" alt="image host"/></a> </p>
+		<p> <img src="https://thumbs2.imgbox.com/f7/e6/MZHqI1zG_t.jpg" alt="image host"/></a> </p>
+	
+    <div class="highlight-box"><strong>Evento:</strong>Add Value 2024 (Andre Heller)</div>	
+		<p> <img src="https://thumbs2.imgbox.com/30/bf/dKYsmEpV_t.jpg" alt="image host"/></a> </p>
+
+    <div class="highlight-box"><strong>Desenvolvimento Profissional:</strong>Datacenter Ascenty</div>
+		<p> <img src="https://thumbs2.imgbox.com/e9/ea/swOjLjHC_t.png" alt="image host"/></a> </p>
+
+	<div class="highlight-box"><strong>Evento:</strong>Feira Hospitalar 2024</div>
+		<p> <img src="https://thumbs2.imgbox.com/ee/66/Ho4N6PmO_t.jpg" alt="image host"/></a> </p>
+		<p> <img src="https://thumbs2.imgbox.com/6b/d8/7RluAK9l_t.jpg" alt="image host"/></a> </p>
+
+    <div class="highlight-box"><strong>Evento:</strong>Lumu CyberSecurity 2023</div>
+		<p> <img src="https://thumbs2.imgbox.com/11/8c/y8DOkzvJ_t.jpg" alt="image host"/></a> </p>
+		
+		
+		
+		
+           `
+      
     }
   };
 
