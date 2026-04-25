@@ -442,17 +442,7 @@
     }
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
 	/* SEÇÃO CONTATO */
 .contact-section {
   padding: 90px 20px;
@@ -751,6 +741,7 @@
           <a class="nav-link" href="#publicacoes">Publicações</a>
           <div class="dropdown-menu">
             <a class="article-trigger" onclick="openArticle('wsus')">Implantação WSUS</a>
+									
           </div>
         </li>
 
@@ -1038,6 +1029,18 @@
       <p>Guia completo para implantação e configuração de servidor WSUS.</p>
       <span class="article-trigger">Leia a publicação completa →</span>
     </article>
+  
+  
+  
+  
+   <article onclick="openArticle('hardening')">
+      <h5>Hardening Windows Server</h5>
+      <p>Guia Prático para Ambientes Corporativos</p>
+      <span class="article-trigger">Leia a publicação completa →</span>
+    </article>
+  
+  
+  
   </div>
 </section>
 
@@ -1114,6 +1117,7 @@
       title: 'Boas Práticas de Segurança em Infraestrutura',
       content: `
         <h3>Por Que Segurança de Infraestrutura É Crítica?</h3>
+		
         <p>Sua infraestrutura é o coração do seu negócio. Se for comprometida, tudo mais falha. Por isso, investir em segurança de infraestrutura é investir na continuidade de seu negócio.</p>
         
         <div class="highlight-box"><strong>Fato:</strong> Segundo estudos recentes, 60% das violações de dados envolvem falhas em configurações de infraestrutura.</div>
@@ -1517,11 +1521,196 @@
             <li>Monitoramento e relatórios</li>
             <li>Troubleshooting comum</li>
           <div class="highlight-box"><strong>Nota:</strong> Este conteúdo encontra-se em elaboração e será disponibilizado em breve.</div>
-		  
-		  </ul>
+        </ul>
         </div>
       `
     },
+	
+	
+	
+	
+	'hardening': {
+  title: 'Hardening',
+  content: `
+    <h3>O que é Hardening de Windows Server?</h3>
+    <p>Guia prático para aumentar a segurança do ambiente.</p>
+	
+	 <p>A segurança de servidores Windows é um dos pilares fundamentais de qualquer infraestrutura corporativa moderna. O hardening consiste em aplicar configurações, políticas e boas práticas para reduzir a superfície de ataque e proteger o sistema contra ameaças internas e externas.</p>
+
+<p>Este guia apresenta um passo a passo prático para fortalecer um Windows Server em ambiente corporativo.</p>
+	
+
+
+
+<h2>1. Atualização do Sistema Operacional</h2>
+<p>Manter o sistema atualizado é a primeira linha de defesa.</p>
+
+<ul>
+  <li>Ativar Windows Update automático (ou via WSUS)</li>
+  <li>Instalar patches de segurança mensalmente</li>
+  <li>Remover atualizações obsoletas ou vulneráveis</li>
+</ul>
+
+<p><strong> Dica:</strong> Crie uma rotina de manutenção mensal para validação de updates críticos.</p>
+
+<h2>2. Princípio do Menor Privilégio (Least Privilege)</h2>
+<p>Evite que usuários e serviços tenham permissões além do necessário.</p>
+
+<ul>
+  <li>Remover usuários do grupo Administrators</li>
+  <li>Criar contas separadas para serviços</li>
+  <li>Usar contas específicas para administração (não usar “Administrator” diretamente)</li>
+</ul>
+
+<h2>3. Política de Senhas Fortes</h2>
+<p>Uma senha fraca é uma das maiores portas de entrada para ataques.</p>
+
+<ul>
+  <li>Mínimo de 12 a 14 caracteres</li>
+  <li>Complexidade obrigatória (letras, números e símbolos)</li>
+  <li>Bloqueio após tentativas inválidas (ex: 5 tentativas)</li>
+  <li>Expiração periódica (ex: 60 a 90 dias)</li>
+</ul>
+
+<h2>4. Configuração de Firewall do Windows</h2>
+<p>O firewall deve estar sempre ativo.</p>
+
+<ul>
+  <li>Bloquear todas as conexões de entrada não utilizadas</li>
+  <li>Permitir apenas portas essenciais (RDP, HTTP/HTTPS se necessário)</li>
+  <li>Criar regras específicas por aplicação</li>
+</ul>
+
+<h2>5. Proteção do Remote Desktop (RDP)</h2>
+<p>O RDP é um dos principais alvos de ataques.</p>
+
+<ul>
+  <li>Alterar a porta padrão 3389</li>
+  <li>Permitir acesso apenas via VPN</li>
+  <li>Habilitar autenticação em nível de rede (NLA)</li>
+  <li>Restringir acesso por IP</li>
+</ul>
+
+<h2>6. Desabilitar Serviços Desnecessários</h2>
+<p>Cada serviço ativo aumenta a superfície de ataque.</p>
+
+<ul>
+  <li>Print Spooler (em servidores que não imprimem)</li>
+  <li>Remote Registry</li>
+  <li>SMBv1 (altamente inseguro)</li>
+  <li>Serviços antigos não utilizados</li>
+</ul>
+
+<h2>7. Auditoria e Logs de Segurança</h2>
+<p>Monitoramento é essencial para detectar ataques.</p>
+
+<ul>
+  <li>Auditoria de logon/logoff</li>
+  <li>Auditoria de acesso a arquivos</li>
+  <li>Auditoria de alterações de políticas</li>
+</ul>
+
+<p><strong> Boa prática:</strong> Centralizar logs em um servidor SIEM ou syslog.</p>
+
+<h2>8. Controle de Aplicações</h2>
+<p>Evite execução de softwares não autorizados.</p>
+
+<ul>
+  <li>AppLocker</li>
+  <li>Windows Defender Application Control (WDAC)</li>
+</ul>
+
+<h2>9. Antivírus e Antimalware</h2>
+<p>O Windows Defender pode ser suficiente se bem configurado.</p>
+
+<ul>
+  <li>Ativar proteção em tempo real</li>
+  <li>Habilitar proteção contra ransomware</li>
+  <li>Atualizações automáticas de assinaturas</li>
+</ul>
+
+<h2>10. Segmentação de Rede</h2>
+<p>Evita movimentação lateral em caso de ataque.</p>
+
+<ul>
+  <li>Separar servidores por VLAN</li>
+  <li>Isolar servidores críticos</li>
+  <li>Criar DMZ para serviços expostos</li>
+</ul>
+
+<h2>11. Backup e Recuperação</h2>
+<p>Segurança não é apenas prevenção — é também recuperação.</p>
+
+<ul>
+  <li>Backup diário automatizado</li>
+  <li>Teste de restauração mensal</li>
+  <li>Backup offline ou imutável</li>
+</ul>
+
+<h2>12. Controle de Acesso a Arquivos</h2>
+<p>Use permissões NTFS corretamente.</p>
+
+<ul>
+  <li>Evitar permissões “Full Control” desnecessárias</li>
+  <li>Usar grupos ao invés de usuários individuais</li>
+  <li>Revisar permissões periodicamente</li>
+</ul>
+
+<h2>13. Políticas de Grupo (GPO)</h2>
+<p>Centralize configurações de segurança.</p>
+
+<ul>
+  <li>Bloqueio de USB</li>
+  <li>Política de senha</li>
+  <li>Configuração de firewall</li>
+  <li>Restrição de software</li>
+</ul>
+
+<h2>14. Monitoramento Contínuo</h2>
+<p>Sem monitoramento, não há segurança real.</p>
+
+<ul>
+  <li>Alertas de login suspeito</li>
+  <li>Monitoramento de CPU/memória</li>
+  <li>Detecção de mudanças em arquivos críticos</li>
+</ul>
+
+<h2> Conclusão</h2>
+<p>
+O hardening de Windows Server não é uma ação única, mas um processo contínuo de segurança. 
+Quanto mais camadas de proteção forem aplicadas, menor será a superfície de ataque.
+</p>
+
+<p>
+A combinação de atualizações, controle de acesso, firewall, auditoria e monitoramento 
+cria um ambiente muito mais seguro para operações corporativas.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  `
+  
+},
+	
+	
+	
+	
+	
     'galeria': {
       title: 'Galeria de Imagens',
       content: `
@@ -1617,17 +1806,17 @@
       document.body.appendChild(modal);
     }
 
-    modal.innerHTML = `
-      <div class="modal-article-content">
-        <div class="modal-article-header">
-          <h2>${article.title}</h2>
-          <span class="close-modal" onclick="closeArticle()">&times;</span>
-        </div>
-        <div class="modal-article-body">
-          ${article.content}
-        </div>
-      </div>
-    `;
+   modal.innerHTML = `
+  <div class="modal-article-content">
+    <div class="modal-article-header">
+      <h2>${article.title}</h2>
+      <span class="close-modal" onclick="closeArticle()">&times;</span>
+    </div>
+    <div class="modal-article-body">
+      ${article.content}
+    </div>
+  </div>
+`;
 
     modal.classList.add('show');
     document.body.style.overflow = 'hidden';
