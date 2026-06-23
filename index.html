@@ -791,8 +791,7 @@
     <p>
       Experiência sólida em projetos de infraestrutura, desde cabeamento estruturado
       até a implantação e administração de switches, servidores Windows e Linux,
-      além de estações de trabalho. Atuação em análise de sistemas, reavaliação de rotinas,
-      elaboração de manuais técnicos, treinamentos e acompanhamento de usuários.
+      além de estações de trabalho. Atuação em treinamentos e acompanhamento de usuários, com foco em segurança e continuidade dos ambientes corporativos.
     </p>
 
     
@@ -1016,6 +1015,16 @@
       <p>Proteção de redes contra ameaças e implementação de arquiteturas seguras.</p>
       <span class="article-trigger">Leia o artigo completo →</span>
     </article>
+	
+	
+	 <article onclick="openArticle('ransomware')">
+      <h5>Ransomware os primeiros 60 segundos</h5>
+      <p>Guia Prático para Ambientes Corporativos</p>
+      <span class="article-trigger">Leia a publicação completa →</span>
+    </article>
+	
+	
+	
   </div>
 </section>
 
@@ -1040,6 +1049,7 @@
     </article>
   
   
+ 
   
   </div>
 </section>
@@ -1494,6 +1504,110 @@
         <p>Segurança de rede corporativa requer uma abordagem em camadas com múltiplas tecnologias e processos. Implemente as práticas recomendadas e mantenha vigilância constante.</p>
         <p>Lembre-se: a segurança é um processo contínuo, não um projeto único.</p>
       `
+	  
+	      },
+	
+'ransomware': {
+  title: 'Resposta a Incidentes de Ransomware: Os Primeiros 60 Minutos',
+  content: `
+    <h3>Por Que os Primeiros Minutos Definem o Tamanho do Dano</h3>
+    <p>Um ataque de ransomware não avisa. Em poucos minutos, ele pode passar de um único computador infectado para toda a rede corporativa criptografada. A diferença entre um incidente controlado e uma paralisação total do negócio está, na maioria das vezes, na forma como a primeira hora é conduzida.</p>
+
+    <div class="highlight-box"><strong>Impacto:</strong> O tempo médio de inatividade após um ataque de ransomware pode superar 20 dias, e cada hora de atraso na resposta tende a ampliar o escopo da criptografia e o custo de recuperação.</div>
+
+    <h3>1. Sinais de que Você Está Sob Ataque</h3>
+    <p>Identificar o ataque rapidamente é o primeiro passo para conter o dano. Fique atento a:</p>
+    <div class="checklist">
+      <ul>
+        <li>Arquivos sendo renomeados em massa com extensões estranhas (.locked, .encrypted, etc.)</li>
+        <li>Picos repentinos de uso de disco (I/O) sem explicação aparente</li>
+        <li>Alertas do EDR/XDR ou antivírus sobre comportamento de criptografia em massa</li>
+        <li>Lentidão generalizada em servidores de arquivos</li>
+        <li>Usuários relatando que não conseguem abrir documentos</li>
+        <li>Aparecimento de notas de resgate (arquivos .txt ou .html) em pastas compartilhadas</li>
+      </ul>
+    </div>
+
+    <h3>2. Passo 1 — Isolar</h3>
+    <p>Ao identificar qualquer um dos sinais acima, a prioridade é interromper a propagação do ataque, não eliminar evidências.</p>
+    <div class="checklist">
+      <ul>
+        <li>Desconecte o equipamento afetado da rede (cabo de rede ou Wi-Fi)</li>
+        <li>Não desligue a máquina — isso preserva evidências importantes em memória RAM, úteis para análise forense</li>
+        <li>Isole o segmento de rede ou VLAN afetado, se possível, via firewall</li>
+        <li>Desative contas de usuário comprometidas, se identificadas</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box"><strong>Atenção:</strong> Desligar a máquina pode parecer instintivo, mas destrói evidências voláteis na memória que ajudam a identificar a variante do ransomware e o vetor de entrada.</div>
+
+    <h3>3. Passo 2 — Identificar o Escopo</h3>
+    <p>Com o ataque isolado, é hora de entender a extensão do problema antes de qualquer ação de recuperação.</p>
+    <div class="checklist">
+      <ul>
+        <li>Mapeie quais servidores, estações e compartilhamentos de rede foram afetados</li>
+        <li>Verifique se os backups foram atingidos antes que sejam criptografados também</li>
+        <li>Identifique a hora aproximada do início do ataque (timestamp dos arquivos criptografados)</li>
+        <li>Verifique se há sinais de exfiltração de dados, não apenas criptografia</li>
+      </ul>
+    </div>
+
+    <h3>4. Passo 3 — Comunicar</h3>
+    <p>Resposta a incidentes não é tarefa solitária. As pessoas certas precisam ser informadas rapidamente, na ordem certa.</p>
+    <div class="checklist">
+      <ul>
+        <li>Gestão/diretoria — para decisões de negócio e priorização de recursos</li>
+        <li>Jurídico — para avaliar obrigações contratuais e regulatórias</li>
+        <li>Encarregado de Dados (DPO) — se houver indício de exposição de dados pessoais, pode ser necessário notificar a ANPD, conforme a LGPD</li>
+        <li>Equipe de TI/Segurança — para mobilizar a resposta técnica</li>
+        <li>Fornecedores de segurança/seguro cibernético, se aplicável</li>
+      </ul>
+    </div>
+
+    <h3>5. Passo 4 — Preservar Evidências</h3>
+    <p>Tudo que for coletado agora pode ser essencial para a investigação, para a perícia e, eventualmente, para questões legais e de seguro.</p>
+    <div class="checklist">
+      <ul>
+        <li>Logs do firewall (FortiGate) no período do ataque</li>
+        <li>Logs do EDR/XDR (SentinelOne, CrowdStrike, etc.)</li>
+        <li>Screenshots da nota de resgate (sem apagar ou modificar o arquivo original)</li>
+        <li>Lista de máquinas e horários de detecção</li>
+        <li>Cópia de e-mails ou acessos suspeitos que possam ter sido o vetor de entrada</li>
+      </ul>
+    </div>
+
+    <h3>6. O Que NÃO Fazer</h3>
+    <p>Em momentos de pressão, decisões precipitadas podem agravar o incidente. Evite:</p>
+    <div class="checklist">
+      <ul>
+        <li>Pagar o resgate sem avaliação jurídica e técnica — não há garantia de que os dados serão devolvidos</li>
+        <li>Restaurar backups sem confirmar que estão livres de contaminação</li>
+        <li>Reconectar máquinas afetadas à rede antes de confirmar a contenção</li>
+        <li>Apagar ou reinstalar sistemas sem antes preservar evidências</li>
+        <li>Comunicar o incidente publicamente antes de uma avaliação jurídica</li>
+      </ul>
+    </div>
+
+    <h3>Checklist Resumido</h3>
+    <div class="checklist">
+      <ul>
+        <li>Isolar a máquina/segmento afetado</li>
+        <li>Não desligar — preservar memória</li>
+        <li>Mapear o escopo do ataque</li>
+        <li>Verificar integridade dos backups</li>
+        <li>Comunicar gestão, jurídico e DPO</li>
+        <li>Preservar logs e evidências</li>
+        <li>Não pagar resgate sem avaliação</li>
+        <li>Não restaurar backup sem confirmar que está limpo</li>
+      </ul>
+    </div>
+
+    <h3>Conclusão</h3>
+    <p>Os primeiros 60 minutos após a detecção de um ataque de ransomware definem o tamanho do estrago. Ter um plano claro, testado e conhecido por toda a equipe de TI é o que separa uma resposta eficiente de um caos que pode levar dias ou semanas para ser controlado.</p>
+    <p>Prevenção continua sendo a melhor defesa, mas estar preparado para responder rapidamente é igualmente essencial.</p>
+   `
+  
+	  
     },
     'wsus': {
       title: 'Implantação WSUS',
@@ -1686,29 +1800,10 @@ A combinação de atualizações, controle de acesso, firewall, auditoria e moni
 cria um ambiente muito mais seguro para operações corporativas.
 </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   `
-  
-},
-	
-	
-	
+
+},	
+
 	
 	
     'galeria': {
